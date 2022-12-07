@@ -4,10 +4,10 @@ import { useState } from "react";
 import * as ContactsAPI from "../utils/ContactsAPI";
 import { useEffect } from "react";
 import CreateContact from "./CreateContact";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   const [contacts, setContacts] = useState([]);
-  const [screen, setScreen] = useState("list");
   const removeContact = (contact) => {
     setContacts(contacts.filter((c) => c.id !== contact.id));
   };
@@ -19,18 +19,17 @@ const App = () => {
     getContacts();
   }, []);
   return (
-    <div>
-      {screen === "list" && (
-        <ListContacts
-          contacts={contacts}
-          onDeleteContact={removeContact}
-          onNavigate={() => {
-            setScreen("create");
-          }}
-        />
-      )}
-      {screen === "create" && <CreateContact />}
-    </div>
+    <Routes>
+      <Route
+        exact
+        path="/"
+        element={
+          <ListContacts contacts={contacts} onDeleteContact={removeContact} />
+        }
+      />
+
+      <Route exact path="/create" element={<CreateContact />} />
+    </Routes>
   );
 };
 
