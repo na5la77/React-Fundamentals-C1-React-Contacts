@@ -25,6 +25,7 @@ export default function ListContacts({ contacts, onDeleteContact,onNavigate }) {
           type="text"
           placeholder="Search Contacts"
         />
+        
         <a className="add-contact" onClick={onNavigate} href="#create">
         Add Contact
         
