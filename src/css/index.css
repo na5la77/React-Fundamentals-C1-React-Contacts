@@ -55,6 +55,7 @@ body,
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50%;
+  max-height: 64px;
 }
 
 .create-contact-details input {
