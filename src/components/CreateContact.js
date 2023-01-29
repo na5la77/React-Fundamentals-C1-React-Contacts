@@ -22,7 +22,7 @@ export default function CreateContact({onCreateContact}) {
     <div className='create-contact-details'>
     <input name='name' placeholder='Name' type='text'/>
     <input name='handle' placeholder='Handle' type='text'/>
-    <button type='submit'>Add Contact</button>
+    <button type='submit'>Add Contactt</button>
     </div>
     </form>
     </div>

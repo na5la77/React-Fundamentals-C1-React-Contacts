@@ -1,7 +1,7 @@
 import React from "react";
 import { PropTypes } from "prop-types";
 import { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function ListContacts({ contacts, onDeleteContact }) {
   const [query, setQuery] = useState("");
@@ -29,8 +29,7 @@ export default function ListContacts({ contacts, onDeleteContact }) {
         />
 
         <Link className="add-contact" to="/create">
-        Add Contact
-        
+          Add Contact
         </Link>
       </div>
       {showingContacts.length !== contacts.length && (

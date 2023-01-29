@@ -21,7 +21,6 @@ const App = () => {
     create();
     navigate("/");
   };
-  // setContacts(...contacts,res)
   useEffect(() => {
     const getContacts = async () => {
       const res = await ContactsAPI.getAll();
